@@ -1,0 +1,137 @@
+.bgAdmin{
+    background-image: url("../resources/img/bgadmin.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.font-n-1{
+    font-family: 'Anton', sans-serif;
+    font-size: smaller;
+}
+.font-n-2{
+    font-family: 'Anton', sans-serif;
+    font-size: medium;
+}
+.font-n-3{
+    font-family: 'Anton', sans-serif;
+    font-size: x-large;
+}
+.font-n-xl{
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+}
+
+.font-l-1{
+    font-family: 'Amatic SC', sans-serif;
+    font-size: smaller;
+}
+.font-l-2{
+    font-family: 'Amatic SC', sans-serif;
+    font-size: medium;
+}
+.font-l-3{
+    font-family: 'Concert One', sans-serif;
+    font-size: x-large;
+}
+.display-none{
+    display: none;
+}
+.font-l-xl{
+    font-family: 'Concert One', sans-serif;
+    font-size: x-large;
+}
+.iconos{
+    color: #4e2703;
+}
+.color-primario{
+    color: #4e2703;
+}
+.color-secundario{
+    color: #f77d0a;
+}
+.color-claro{
+    color: #c5b8ad;
+   
+}
+.color-oscuro{
+    color: #1d1001;
+}
+.fonst{
+    font-family: 'Amatic SC', sans-serif;
+    font-family: 'Concert One', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+.autocompletado{
+    position: absolute;
+    height: auto;
+    background-color: #c8c2bd;
+    border-radius: 10%;
+}
+.invalido{
+    background-color: #ff5353;
+    color: #ff5353;
+    border-color: #ff5353;
+}
+.valido{
+    background-color: #31ff73;
+}
+.bg-ok{
+    background-color: #005415db;
+    color: #005415db;
+    border-color: #31ff73;
+}
+.btn-primario{
+    background-color: #957558;
+    border-radius: 20px;
+    width: 10%;
+
+}
+.btn-primario:hover{
+    background-color:  #4e2703;
+}
+.bg-autocomplete{
+    background-color: #957558;
+}
+.bg-autocomplete:hover{
+    background-color: #4e2703;
+}
+.formulario{
+    background-image: url(/resources/img/bgadmin2.jpg);
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #888888;
+    width: 40%;
+    margin: 2%;
+}
+.bg-text{
+    background-color: #c5b8ad;
+    border-radius: 10%;
+}
+.form-vh{
+    background-image: url(/resources/img/camion.jpg);
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #888888;
+    width: 40%;
+    margin: 5%;
+  
+}
+.op-1{
+    opacity: 0.1;
+}
+.op-10{
+    opacity: 1;
+}
+.op-5{
+    opacity: 0.5;
+}
+.op-8{
+    opacity: 0.8;
+}
+.op-9{
+    opacity: 0.9;
+}
+
+
+

@@ -1,0 +1,48 @@
+@extends('layouts.app')
+
+@section('template_title')
+{{ __('Update') }} Asistencia
+@endsection
+
+@section('content')
+<section class="content container-fluid">
+    <div class="">
+        <div class="col-md-12">
+
+            @includeif('partials.errors')
+
+            <div class="card card-default">
+                <div class="card-header">
+                    <span class="card-title"><i class="fa-solid fa-door-open fa-2xl me-2 iconos"></i>SALIDA</span>
+                </div>
+                <div class="card-body d-flex justify-content-center">
+
+                    <div class="card formulario">
+                    <form method="POST" action="{{ route('asistencias.update', $asistencia->id) }}" role="form" enctype="multipart/form-data">
+                        {{ method_field('PATCH') }}
+                        @csrf
+
+                        @include('asistencia.formSalida')
+
+                    </form>
+                    </div>
+
+                    <div class="card formulario" style="width: 18rem;">
+                    <img src="{{$asistencia->empleado->foto}}" class="card-img-top w-50" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$asistencia->empleado->nombre}}</h5>
+                        <p class="card-text">{{$asistencia->novedad}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <h3 class="Card text">{{$asistencia->empleado->puesto}}</h3>
+                    </ul>
+
+                </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+@endsection
