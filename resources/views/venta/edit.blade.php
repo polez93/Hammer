@@ -16,6 +16,7 @@
                         <span class="card-title">{{ __('Salida') }} Venta</span>
                     </div>
                     <div class="card-body">
+                    <div class="alert alert-warning position-absolute top-0 end-0 w-25" id="aviso" style="display: none;"></div>
                         <form method="POST" action="{{ route('ventas.update', $venta->id) }}" class="needs-validation"  role="form" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
@@ -50,14 +51,19 @@
         let valorPesoSalida = e.srcElement.value;
         let pesoNeto =  parseFloat(valorPesoSalida - pesoEntrada).toFixed(2); 
         if (pesoNeto > capacidad) {
-            alert("El peso Excede la capacidad del vehiculo")
+            const aviso = document.querySelector("#aviso");
+            aviso.style.display = 'block';
+            aviso.innerHTML = "El peso Neto supera la capacidad del Vehiculo";
+            setTimeout(function(){
+            aviso.style.display = 'none';
+            }, 4000)
             e.srcElement.value = 0;
             document.querySelector('#btn-facturar').disabled = true;
         }
         if (valorPesoSalida < pesoEntrada) {
             e.srcElement.classList.add("invalido");
         }
-        if (pesoNeto > 0) {
+        if (pesoNeto > 0 && pesoNeto <= capacidad) {
             texPesoNeto.value = pesoNeto;
             const textTotal = document.querySelector("#total")
             let precio = document.querySelector("#precio").value;

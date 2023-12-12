@@ -54,6 +54,7 @@
                                 <a class="dropdown-item" href="{{ url('/productos')}}">Productos</a>
                                 <a class="dropdown-item" href="{{ url('/clientes')}}">Clientes</a>
                                 <a class="dropdown-item" href="{{ url('/vehiculos')}}">Vehiculos</a>                                
+                                <a class="dropdown-item" href="{{ url('/articulos')}}">Productos-Api</a>                                
                             </div>
                         </div>
                         <div class="dropdown">

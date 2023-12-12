@@ -11,6 +11,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\VentaController;
+use App\Http\Controllers\ArticuloController;
 use App\Http\Controllers\mailHammerController;
 use App\Mail\FacturaMailable;
 use Illuminate\Support\Facades\App;
@@ -29,10 +30,11 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
+Route::get('/index', function () {
     return view('welcome');
 });
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/',[ArticuloController::class, 'getAll'])->name('/');
 
 Auth::routes();
 
@@ -46,6 +48,7 @@ Route::middleware(['auth','can:gestion'])->group(function () {
     Route::resource('roles', RoleController::class);
     Route::resource('ventas', VentaController::class);
     Route::resource('recibos', ReciboController::class);
+    Route::resource('articulos', ArticuloController::class);
 
     // ...
 });
